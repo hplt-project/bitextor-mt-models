@@ -14,5 +14,7 @@ source language(s): cjy_Hans cjy_Hant cmn cmn_Hans cmn_Hant gan lzh lzh_Hans nan
 ### Huggingface MarianMT model
 https://huggingface.co/Helsinki-NLP/opus-mt-zh-en (original weights [opus-2020-07-17.zip](https://object.pouta.csc.fi/Tatoeba-MT-models/zho-eng/opus-2020-07-17.zip))
 
-### Choice
-Tentative teacher model: `opus-2020-07-17.zip` using the original weights or converted Huggingface MarianMT model. 
+### Choices
+Tentative teacher model: 
+- `opus-2020-07-17.zip` using the original weights or converted Huggingface MarianMT model. 
+- [opus-2021-02-18.zip](https://object.pouta.csc.fi/Tatoeba-MT-models/zho-eng/opus-2021-02-18.zip) achieved best averaged BLEU over news, tatoeba, tico19-test testsets.
