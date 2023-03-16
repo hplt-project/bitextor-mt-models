@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "files": [
+    "Tatoeba-v2022-03-03.ar-en.ar.gz",
+    "Tatoeba-v2022-03-03.ar-en.en.gz"
+  ],
+  "filters": [
+    {
+      "filter": "max_word_length",
+      "parameters": {
+        "MAXWORDLENGTH": 150
+      },
+      "language": null
+    },
+    {
+      "filter": "langid",
+      "parameters": {
+        "SRC_LANG": "ar",
+        "TRG_LANG": "en",
+        "ALLOW_SIMILAR": true,
+        "ALLOW_UNKNOWN": true,
+        "DEBUG": null
+      },
+      "language": null
+    },
+    {
+      "filter": "bicleaner_hardrules",
+      "parameters": {
+        "LANG1": "ar",
+        "LANG2": "en",
+        "LM_THRESHOLD": 0.5,
+        "DISABLE_LM_FILTER": false,
+        "DISABLE_PORN_REMOVAL": false,
+        "DISABLE_MINIMAL_LENGTH": "false"
+      },
+      "language": null
+    },
+    {
+      "filter": "alpha_ratio",
+      "parameters": {
+        "LANG1": "ar",
+        "LANG2": "en",
+        "SRCWORDRAT": 0.4,
+        "TRGWORDRAT": 0.4,
+        "SRCALPHARAT": 0.5,
+        "TRGALPHARAT": 0.5,
+        "DEBUG": false
+      },
+      "language": null
+    },
+    {
+      "filter": "src_trg_ratio",
+      "parameters": {
+        "RATIO": 0.6,
+        "LOG": "false"
+      },
+      "language": null
+    }
+  ]
+}
