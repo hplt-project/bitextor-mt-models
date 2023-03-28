@@ -8,11 +8,13 @@ BASE="/fs/surtr0/gnail/hplt/bitextor-mt-models/ara-eng"
 SRC=ar
 TRG=en
 
-pigz -dc ${BASE}/data/train/test.$SRC.gz |
-  $MARIAN/marian-decoder -c model/model.npz.best-chrf.npz.decoder.yml \
-    -m model/model.npz.best-chrf.npz \
-    --vocabs ${BASE}/students/model.ar-en.spm{,} \
-    --quiet --quiet-translation --log test.log \
-    ${compute} "${@}" |
-  sacrebleu -m bleu chrf -- <(zcat ${BASE}/data/train/test.$TRG.gz) |
-  tee scores.log
+for testset in valid test; do
+  pigz -dc ${BASE}/data/train/$testset.$SRC.gz |
+    $MARIAN/marian-decoder -c model/model.npz.best-chrf.npz.decoder.yml \
+      -m model/model.npz.best-chrf.npz \
+      --vocabs ${BASE}/students/model.ar-en.spm{,} \
+      --quiet --quiet-translation --log test.log \
+      ${compute} "${@}" |
+    sacrebleu -m bleu chrf -- <(zcat ${BASE}/data/train/$testset.$TRG.gz) |
+    tee "scores_$testset.log"
+done
