@@ -14,4 +14,5 @@ pigz -dc ${BASE}/data/train/test.$SRC.gz |
     --vocabs ${BASE}/students/model.ar-en.spm{,} \
     --quiet --quiet-translation --log test.log \
     ${compute} "${@}" |
-  sacrebleu -m bleu chrf -- <(zcat ${BASE}/data/train/test.$TRG.gz)
+  sacrebleu -m bleu chrf -- <(zcat ${BASE}/data/train/test.$TRG.gz) |
+  tee scores.log
