@@ -12,7 +12,7 @@ for testset in valid test; do
   pigz -dc ${BASE}/data/train/$testset.$SRC.gz |
     $MARIAN/marian-decoder -c model/model.npz.best-chrf.npz.decoder.yml \
       -m model/model.npz.best-chrf.npz \
-      --vocabs ${BASE}/students/model.$SRC-$TRG.spm{,} \
+      --vocabs ${BASE}/vocab/v1/model.$SRC-$TRG.spm{,} \
       --quiet --quiet-translation --log test.log \
       ${compute} "${@}" |
     sacrebleu -m bleu chrf -- <(zcat ${BASE}/data/train/$testset.$TRG.gz) |
@@ -24,7 +24,7 @@ for testset in dev devtest; do
   cat ${FLORES}/${testset}/hin_Deva.$testset |
     $MARIAN/marian-decoder -c model/model.npz.best-chrf.npz.decoder.yml \
       -m model/model.npz.best-chrf.npz \
-      --vocabs ${BASE}/students/model.$SRC-$TRG.spm{,} \
+      --vocabs ${BASE}/vocab/v1/model.$SRC-$TRG.spm{,} \
       --quiet --quiet-translation --log test.log \
       ${compute} "${@}" |
     sacrebleu -m bleu chrf -- ${FLORES}/$testset/eng_Latn.$testset |
