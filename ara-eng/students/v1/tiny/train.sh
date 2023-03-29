@@ -17,7 +17,7 @@ $MARIAN/marian -c training.yml -c student*.yml -c extra.yml \
     --model model/model.npz \
     --train-sets ${BASE}/data/train/train.{$SRC,$TRG}.gz \
     --tempdir /tmp \
-    --vocabs ${BASE}/students/model.ar-en.spm{,} \
+    --vocabs ${BASE}/vocab/v1/model.$SRC-$TRG.spm{,} \
     --dim-vocabs 32000 32000 \
     --valid-metrics chrf bleu ce-mean-words \
     --valid-sets ${BASE}/data/train/valid.{$SRC,$TRG}.gz --valid-translation-output devset.out --quiet-translation \
