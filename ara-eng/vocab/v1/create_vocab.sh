@@ -14,7 +14,7 @@ $SPM_EXEC \
   --unk_id=1 \
   ${PREFIX} \
   --vocab_size=${VOCAB_SIZE} \
-  --input=<(sed 's/\t/\n/g' <../data/train/train.tsv) \
+  --input=<(sed 's/\t/\n/g' <../../data/train/train.tsv) \
   --input_sentence_size=20000000 \
   --train_extremely_large_corpus \
   --byte_fallback
