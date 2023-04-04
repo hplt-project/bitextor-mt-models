@@ -1,0 +1,37 @@
+common:
+    output_directory: data/spa-eng/
+
+steps:
+# Filter
+  - type: filter
+    parameters:
+      inputs: [train.trg.gz, train.src.gz]
+      outputs: [train.spa.filtered, train.eng.filtered]
+      filters:
+        - LengthFilter:
+            name: word
+            unit: word
+            min_length: 3
+            max_length: 100
+
+        - LengthRatioFilter:
+            name: char
+            unit: char
+
+        - LengthRatioFilter:
+            name: word
+            unit: word
+
+        - AlphabetRatioFilter: {}
+
+        - CharacterScoreFilter:
+            scripts: [Latin, Latin]
+
+        - LanguageIDFilter:
+            name: cld2
+            id_method: cld2
+            languages: [es, en]
+
+        - TerminalPunctuationFilter: {}
+
+        - NonZeroNumeralsFilter: {}

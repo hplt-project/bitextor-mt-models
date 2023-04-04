@@ -1,0 +1,43 @@
+common:
+    output_directory: data/glg-eng/backtranslated
+
+steps:
+  - type: concatenate
+    parameters:
+      inputs:
+        - wikibooks.aa.eng-glg.glg.gz
+        - wikinews.aa.eng-glg.glg.gz
+        - wikipedia.aa.eng-glg.glg.gz
+        - wikipedia.ac.eng-glg.glg.gz
+        - wikipedia.ad.eng-glg.glg.gz
+        - wikiquote.aa.eng-glg.glg.gz
+      output: backtranslated.gl
+
+  - type: concatenate
+    parameters:
+      inputs:
+        - wikibooks.aa.eng-glg.eng.gz
+        - wikinews.aa.eng-glg.eng.gz
+        - wikipedia.aa.eng-glg.eng.gz
+        - wikipedia.ac.eng-glg.eng.gz
+        - wikipedia.ad.eng-glg.eng.gz
+        - wikiquote.aa.eng-glg.eng.gz
+      output: backtranslated.en
+
+# Remove duplicates of the corpus
+  - type: remove_duplicates
+    parameters:
+      inputs: [backtranslated.gl, backtranslated.en]
+      outputs: [backtranslated_dedup.gl, backtranslated_dedup.en]
+  
+# Filter
+  - type: filter
+    parameters:
+      inputs: [backtranslated_dedup.gl, backtranslated_dedup.en]
+      outputs: [backtranslated_dedup_filtered.gl, backtranslated_dedup_filtered.en]
+      filters:
+        - LengthFilter:
+            name: word
+            unit: word
+            min_length: 3
+            max_length: 100
