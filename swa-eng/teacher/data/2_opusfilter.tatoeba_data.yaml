@@ -1,0 +1,75 @@
+common:
+    output_directory: data/opustrainer/
+
+steps:
+# Remove short sentences from clean data
+  - type: filter
+    parameters:
+      inputs: [clean.sw, clean.en]
+      outputs: [clean_filtered.sw, clean_filtered.en]
+      filters:
+        - LengthFilter:
+            min_length: 3
+            max_length: 100
+
+# Remove duplicate s of clean data
+  - type: remove_duplicates
+    parameters:
+      inputs: [clean_filtered.sw, clean_filtered.en]
+      outputs: [clean_filtered_dedup.sw, clean_filtered_dedup.en]
+
+# Filter each pair of sentences from the dirty subset
+  - type: filter
+    parameters:
+      inputs: [dirty.sw, dirty.en]
+      outputs: [dirty_filtered.sw, dirty_filtered.en]
+      filters:
+        - LengthRatioFilter:
+            name: char
+            unit: char
+
+        - LengthRatioFilter:
+            name: word
+            unit: word
+
+        - AlphabetRatioFilter: {}
+
+        - CharacterScoreFilter:
+            scripts: [Latin, Latin]
+
+        - LanguageIDFilter:
+            name: cld2
+            id_method: cld2
+            languages: [sw, en]
+
+        - TerminalPunctuationFilter: {}
+
+        - NonZeroNumeralsFilter: {}
+
+# Filter each pair of sentences from the mid subset
+  - type: filter
+    parameters:
+      inputs: [mid.sw, mid.en]
+      outputs: [mid_filtered.sw, mid_filtered.en]
+      filters:
+        - LengthRatioFilter:
+            name: char
+            unit: char
+
+        - LengthRatioFilter:
+            name: word
+            unit: word
+
+        - AlphabetRatioFilter: {}
+
+        - CharacterScoreFilter:
+            scripts: [Latin, Latin]
+
+        - LanguageIDFilter:
+            name: cld2
+            id_method: cld2
+            languages: [sw, en]
+
+        - TerminalPunctuationFilter: {}
+
+        - NonZeroNumeralsFilter: {}
