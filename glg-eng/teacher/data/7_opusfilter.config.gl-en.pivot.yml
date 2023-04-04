@@ -1,0 +1,58 @@
+common:
+    output_directory: data/glg-eng/pivoted
+steps:
+  - type: concatenate
+    parameters:
+      inputs:
+        - Tatoeba-train.por-glg-eng.al.eng.gz
+        - Tatoeba-train.por-glg-eng.ap.eng.gz
+        - Tatoeba-train.por-glg-eng.aw.eng.gz
+        - Tatoeba-train.por-glg-eng.cm.eng.gz
+        - Tatoeba-train.por-glg-eng.eg.eng.gz
+        - Tatoeba-train.por-glg-eng.fc.eng.gz
+        - Tatoeba-train.por-glg-eng.in.eng.gz 
+        - Tatoeba-train.por-glg-eng.ja.eng.gz
+        - Tatoeba-train.por-glg-eng.jf.eng.gz
+        - Tatoeba-train.por-glg-eng.km.eng.gz
+        - Tatoeba-train.por-glg-eng.kq.eng.gz
+        - Tatoeba-train.por-glg-eng.lq.eng.gz
+        - Tatoeba-train.por-glg-eng.lw.eng.gz
+        - Tatoeba-train.por-glg-eng.gr.eng.gz
+      output: tatoteba.pivot.en-gl.en
+
+  - type: concatenate
+    parameters:
+      inputs:
+        - Tatoeba-train.por-glg-eng.al.glg.gz
+        - Tatoeba-train.por-glg-eng.ap.glg.gz
+        - Tatoeba-train.por-glg-eng.aw.glg.gz
+        - Tatoeba-train.por-glg-eng.cm.glg.gz
+        - Tatoeba-train.por-glg-eng.eg.glg.gz
+        - Tatoeba-train.spa-glg-eng.fc.glg.gz
+        - Tatoeba-train.por-glg-eng.in.glg.gz 
+        - Tatoeba-train.por-glg-eng.ja.glg.gz
+        - Tatoeba-train.por-glg-eng.jf.glg.gz
+        - Tatoeba-train.por-glg-eng.km.glg.gz
+        - Tatoeba-train.por-glg-eng.kq.glg.gz
+        - Tatoeba-train.por-glg-eng.lq.glg.gz
+        - Tatoeba-train.por-glg-eng.lw.glg.gz
+        - Tatoeba-train.por-glg-eng.gr.glg.gz
+      output: tatoteba.pivot.en-gl.gl
+
+# Remove duplicates of the corpus
+  - type: remove_duplicates
+    parameters:
+      inputs: [tatoteba.pivot.en-gl.gl, tatoteba.pivot.en-gl.en]
+      outputs: [tatoteba.pivot.dedup.en-gl.gl, tatoteba.pivot.dedup.en-gl.en]
+  
+# Filter
+  - type: filter
+    parameters:
+      inputs: [tatoteba.pivot.dedup.en-gl.gl, tatoteba.pivot.dedup.en-gl.en]
+      outputs: [tatoteba.pivot.dedup.filtered.en-gl.gl, tatoteba.pivot.dedup.filtered.en-gl.en]
+      filters:
+        - LengthFilter:
+            name: word
+            unit: word
+            min_length: 3
+            max_length: 100
