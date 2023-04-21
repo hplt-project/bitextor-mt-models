@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "files": [
+    "wikimedia-v20210402.en-hi.en.gz",
+    "wikimedia-v20210402.en-hi.hi.gz"
+  ],
+  "filters": [
+    {
+      "filter": "max_word_length",
+      "parameters": {
+        "MAXWORDLENGTH": 150
+      },
+      "language": null
+    },
+    {
+      "filter": "bifixer",
+      "parameters": {
+        "SRCLANG": "en",
+        "TRGLANG": "hi",
+        "IGNORE_CHARACTERS": false,
+        "IGNORE_NORMALIZATION": false,
+        "IGNORE_HTML": false,
+        "IGNORE_EMPTY": false,
+        "IGNORE_LONG": false,
+        "IGNORE_ORTHOGRAPHY": false,
+        "IGNORE_DETOKENIZATION": false,
+        "IGNORE_DUPLICATES": false,
+        "AGGRESSIVE_DEDUP": false,
+        "IGNORE_SEGMENTATION": false,
+        "WORDS_BEFORE_SEGMENTING": 15,
+        "SEGMENTER": "",
+        "DEBUG": null
+      },
+      "language": null
+    },
+    {
+      "filter": "fix_quotes",
+      "parameters": {},
+      "language": null
+    },
+    {
+      "filter": "src_trg_ratio",
+      "parameters": {
+        "RATIO": 0.6,
+        "LOG": false
+      },
+      "language": null
+    },
+    {
+      "filter": "alpha_ratio",
+      "parameters": {
+        "LANG1": "en",
+        "LANG2": "hi",
+        "SRCWORDRAT": 0.4,
+        "TRGWORDRAT": 0.4,
+        "SRCALPHARAT": 0.5,
+        "TRGALPHARAT": 0.5,
+        "DEBUG": false
+      },
+      "language": null
+    },
+    {
+      "filter": "bicleaner_hardrules",
+      "parameters": {
+        "LANG1": "en",
+        "LANG2": "hi",
+        "LM_THRESHOLD": 0.5,
+        "DISABLE_LM_FILTER": false,
+        "DISABLE_PORN_REMOVAL": false,
+        "DISABLE_MINIMAL_LENGTH": true
+      },
+      "language": null
+    },
+    {
+      "filter": "fix_wiki",
+      "parameters": {
+        "ALWAYS": false,
+        "FOOTNOTES": true,
+        "URLS": true,
+        "WIKILINKS": true,
+        "CODE": true,
+        "HEADINGS": true,
+        "REMOVEEMPTYLINES": true
+      },
+      "language": null
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+output-omit-bias: true
+check-gradient-nan: true
+sentencepiece-alphas: 0.1

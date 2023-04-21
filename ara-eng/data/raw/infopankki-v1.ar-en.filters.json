@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "files": [
+    "infopankki-v1.ar-en.ar.gz",
+    "infopankki-v1.ar-en.en.gz"
+  ],
+  "filters": [
+    {
+      "filter": "bifixer",
+      "parameters": {
+        "SRCLANG": "ar",
+        "TRGLANG": "en",
+        "IGNORE_CHARACTERS": false,
+        "IGNORE_NORMALIZATION": false,
+        "IGNORE_HTML": false,
+        "IGNORE_EMPTY": false,
+        "IGNORE_LONG": false,
+        "IGNORE_ORTHOGRAPHY": false,
+        "IGNORE_DETOKENIZATION": false,
+        "IGNORE_DUPLICATES": false,
+        "AGGRESSIVE_DEDUP": false,
+        "IGNORE_SEGMENTATION": false,
+        "WORDS_BEFORE_SEGMENTING": 15,
+        "SEGMENTER": "",
+        "DEBUG": null
+      },
+      "language": null
+    },
+    {
+      "filter": "bicleaner_hardrules",
+      "parameters": {
+        "LANG1": "ar",
+        "LANG2": "en",
+        "LM_THRESHOLD": 0.5,
+        "DISABLE_LM_FILTER": false,
+        "DISABLE_PORN_REMOVAL": false,
+        "DISABLE_MINIMAL_LENGTH": "false"
+      },
+      "language": null
+    },
+    {
+      "filter": "alpha_ratio",
+      "parameters": {
+        "LANG1": "ar",
+        "LANG2": "en",
+        "SRCWORDRAT": 0.4,
+        "TRGWORDRAT": 0.4,
+        "SRCALPHARAT": 0.5,
+        "TRGALPHARAT": 0.5,
+        "DEBUG": false
+      },
+      "language": null
+    }
+  ]
+}

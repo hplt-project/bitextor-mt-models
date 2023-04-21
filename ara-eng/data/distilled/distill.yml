@@ -1,0 +1,16 @@
+relative-paths: true
+models:
+  - ../teacher/opus+bt.spm32k-spm32k.transformer-align.model1.npz.best-perplexity.npz
+vocabs:
+  - ../teacher/opus+bt.spm32k-spm32k.vocab.yml
+  - ../teacher/opus+bt.spm32k-spm32k.vocab.yml
+beam-size: 6
+normalize: 1
+word-penalty: 0
+mini-batch: 128
+# mini-batch-words: 32000
+workspace: 9000
+maxi-batch: 512
+maxi-batch-sort: src
+quiet: true
+quiet-translation: true
