@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+set -e
 
 compute=""
 [[ -n "$CUDA_VISIBLE_DEVICES" ]] \
-    && compute="-d `echo $CUDA_VISIBLE_DEVICES | tr ',' ' '`"
+    && compute="-d ${CUDA_VISIBLE_DEVICES//,/ }"
 
 MARIAN="/lnet/troja/projects/hplt/marian-dev/build-$(hostname)"
 MOSESHOME="/lnet/troja/projects/hplt/mosesdecoder"
@@ -54,7 +55,8 @@ preprocess() {
         -e 's/【/\[/g' \
         -e 's/】/\]/g' \
         -e 's/％/\%/g' \
-    | perl -C -pe 's/\p{C}/ /g;' \
+    | perl -C -pe  's/(?!\n)\p{C}/ /g;' \
+    | perl -CIOE -pe 's/[\x{2060}\x{200B}\x{feff}]//g' \
     | sed 's/  */ /g;s/^ *//g;s/ *$//g'
 }
 
@@ -63,6 +65,7 @@ teacher() {
     opts="" #"--quiet --quiet-translation"
     preprocess \
         | $MARIAN/spm_encode --model $base/source.spm \
+        | sed "s/^/>>$TRG<< /" \
         | $MARIAN/marian-decoder -c $base/decoder.yml ${opts} ${compute} \
         | $MARIAN/spm_decode --model $base/target.spm
 }
@@ -73,7 +76,7 @@ for teacher_model in ${teachers[@]}; do
 
     for testset in valid test; do
         pigz -dc ${BASE}/data/train/$testset.$SRC.gz \
-            | teacher $teacher_base $teacher_model \
+            | teacher $teacher_base \
             | sacrebleu -m bleu chrf -- <(zcat ${BASE}/data/train/$testset.$TRG.gz) \
             | tee "scores_${teacher_model}_${testset}.log"
     done
@@ -82,15 +85,15 @@ for teacher_model in ${teachers[@]}; do
     FLORES="/net/data/flores-200"
     for testset in dev devtest; do
         cat ${FLORES}/${testset}/vie_Latn.$testset \
-            | teacher $teacher_base $teacher_model \
+            | teacher $teacher_base \
             | sacrebleu -m bleu chrf -- ${FLORES}/$testset/eng_Latn.$testset \
             | tee "scores_flores_${teacher_model}_${testset}.log"
     done
 
     # NTREX (https://github.com/MicrosoftTranslator/NTREX.git)
     NTREX="/net/data/NTREX/NTREX-128"
-    cat ${NTREX}/newstest2019-ref.vie.txt \
-        | teacher $teacher_base $teacher_model \
+    grep [a-z] ${NTREX}/newstest2019-ref.vie.txt \
+        | teacher $teacher_base \
         | sacrebleu -m bleu chrf -- ${NTREX}//newstest2019-src.eng.txt \
         | tee "scores_ntrex_${teacher_model}.log"
 done

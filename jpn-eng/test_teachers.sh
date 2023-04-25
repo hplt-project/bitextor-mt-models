@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
+test -e
 
 compute=""
 [[ -n "$CUDA_VISIBLE_DEVICES" ]] \
-    && compute="-d `echo $CUDA_VISIBLE_DEVICES | tr ',' ' '`"
+    && compute="-d ${CUDA_VISIBLE_DEVICES//,/ }"
 
 MARIAN="/lnet/troja/projects/hplt/marian-dev/build-$(hostname)"
 MOSESHOME="/lnet/troja/projects/hplt/mosesdecoder"
+TOKENIZER="$MOSESHOME/scripts/tokenizer"
 BASE="."
 
 SRC=ja
@@ -32,7 +34,7 @@ preprocess() {
 
 teacher() {
     base=$1
-    opts="" #"--quiet --quiet-translation"
+    opts=""  #"--quiet --quiet-translation"
     preprocess $2 \
         | $MARIAN/spm_encode --model $base/source.spm \
         | $MARIAN/marian-decoder -c $base/decoder.yml ${opts} ${compute} \
