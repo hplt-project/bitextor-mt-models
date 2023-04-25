@@ -10,9 +10,14 @@ We used the Firefox pipeline to train new students, with tiny and base architect
 # Evaluation
 BLEU scores for the teacher and the students.
 
-|Model|Flores200-dev|Flores200-devtest|
-|---|---|---|
-|Teacher | 40,7 | 39,8 |
-|Studemt-base | 37,6 | 36,5 |
-|Student-tiny | 36 | 35 |
 
+|Model|Flores200-dev|Flores200-devtest| Model Size | tokens/s on 1 CPU
+|---|---|---|---|---|
+|Teacher | 40,7 | 39,8 | 798M |  - |
+|Student-base | 37,6 |	36,1| 41M  | 1108,11 |
+|Student-tiny | 35,9 |34,3 | 17M | 2337,10 |
+
+# How to run
+1. Compile [browser-mt/marian-dev](https://github.com/browsermt/marian-dev)
+2. Each model comes with a script called `run.sh` and a configuration file `config.yml`, modify them as needed
+3. Run `bash run.sh`
