@@ -1,0 +1,48 @@
+# transformer-big configuration
+dim-vocabs: [32000, 32000]
+type: transformer
+task: transformer-big
+output-omit-bias: true
+lr-report: true
+
+# Training type TSV
+tsv: true # Tsv input
+#no-shuffle: true
+shuffle: batches
+# SPM settings
+#allow-special: true #  "Allow special symbols to appear in output, e.g. for SentencePiece with byte-fallback do not suppress the newline symbol" For decoding
+sentencepiece-alphas: 0.1 # https://github.com/google/sentencepiece SPM sampling
+
+# Paths and valid options
+model: /scratch/project_2005815/OpusTrainer/models/sw-en_big/model.npz
+vocabs:
+    - /scratch/project_2005815/OpusTrainer/models/spm/model.sw-en.bt.spm
+    - /scratch/project_2005815/OpusTrainer/models/spm/model.sw-en.bt.spm
+log: /scratch/project_2005815/OpusTrainer/models/sw-en_big/train.log
+
+valid-log: /scratch/project_2005815/OpusTrainer/models/sw-en_big/valid.log
+valid-translation-output: /scratch/project_2005815/OpusTrainer/models/sw-en_big/output.translation.en
+valid-sets: /scratch/project_2005815/OpusTrainer/data/test/flores200.dev.swen
+valid-metrics:
+    - chrf
+    - bleu
+    - perplexity
+valid-freq: 3000
+
+# Training options
+workspace: 20000
+optimizer-delay: 2
+keep-best: true
+overwrite: true
+no-restore-corpus: true
+valid-reset-all: true
+valid-reset-stalled: true
+
+disp-first: 10
+
+# Running options
+devices:
+    - 0
+    - 1
+    - 2
+    - 3

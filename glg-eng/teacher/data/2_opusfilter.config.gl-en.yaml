@@ -1,0 +1,59 @@
+common:
+    output_directory: .
+
+steps:
+# Score each pair of sentences from the dirty subset
+  - type: filter
+    parameters:
+      inputs: [data/raw/dirty.gl, data/raw/dirty.en]
+      outputs: [data/opustrainer/dirty_filtered.gl, data/opustrainer/dirty_filtered.en]
+      filters:
+        - LengthRatioFilter:
+            name: char
+            unit: char
+
+        - LengthRatioFilter:
+            name: word
+            unit: word
+
+        - AlphabetRatioFilter: {}
+
+        - CharacterScoreFilter:
+            scripts: [Latin, Latin]
+
+        - LanguageIDFilter:
+            name: cld2
+            id_method: cld2
+            languages: [gl, en]
+
+        - TerminalPunctuationFilter: {}
+
+        - NonZeroNumeralsFilter: {}
+
+# Score each pair of sentences from the mid subset
+  - type: filter
+    parameters:
+      inputs: [data/raw/mid.gl, data/raw/mid.en]
+      outputs: [data/opustrainer/mid_filtered.gl, data/opustrainer/mid_filtered.en]
+      filters:
+        - LengthRatioFilter:
+            name: char
+            unit: char
+
+        - LengthRatioFilter:
+            name: word
+            unit: word
+
+        - AlphabetRatioFilter: {}
+
+        - CharacterScoreFilter:
+            scripts: [Latin, Latin]
+
+        - LanguageIDFilter:
+            name: cld2
+            id_method: cld2
+            languages: [gl, en]
+
+        - TerminalPunctuationFilter: {}
+
+        - NonZeroNumeralsFilter: {}

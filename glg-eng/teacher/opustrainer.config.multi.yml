@@ -1,0 +1,56 @@
+# Datasets are already TSV files
+datasets:
+  piv: /scratch/project_2005815/OpusTrainer/data/glg-eng/pivoted.tsv
+  bt: /scratch/project_2005815/OpusTrainer/data/glg-eng/backtranslated.tsv
+  gl: /scratch/project_2005815/OpusTrainer/data/glg-eng/train.gl-en.tsv
+  es: /scratch/project_2005815/OpusTrainer/data/spa-eng/train.es-en.tsv
+  pt: /scratch/project_2005815/OpusTrainer/data/por-eng/train.pt-en.tsv
+
+stages:
+  - backtranslated
+  - pivot
+  - start
+  - mid
+  - end
+
+backtranslated:
+  - piv 0
+  - bt 0.7
+  - gl  0.1
+  - es 0.1
+  - pt  0.1
+  - until bt 2
+
+pivot:
+  - piv 0.7
+  - bt 0
+  - gl  0.1
+  - es 0.1
+  - pt  0.1
+  - until piv 2
+
+start:
+  - piv 0.1
+  - bt 0.1
+  - gl  0.2
+  - es 0.3
+  - pt  0.4
+  - until pt 2 # Until two epochs of galician
+
+mid:
+  - piv 0
+  - bt 0
+  - gl  0.3
+  - es 0.4
+  - pt  0.3
+  - until es 2 # Until two epochs of galician
+
+end:
+  - piv 0
+  - bt 0
+  - gl  0.4
+  - es 0.3
+  - pt  0.3
+  - until gl 5 # use `inf` to mean until forever
+
+seed: 1111
