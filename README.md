@@ -12,3 +12,23 @@ Configuration files could include:
 - OPUS-cleaner configurations (per dataset)
 - bergamot pipeline configurations
 - Just notes about which OPUS model you're distilling, using which datasets.
+
+# Download models:
+https://object.pouta.csc.fi/hplt_bitextor_models/ara_base.tar.gz \
+https://object.pouta.csc.fi/hplt_bitextor_models/ara_tiny.tar.gz \
+https://object.pouta.csc.fi/hplt_bitextor_models/eus_base.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/eus_tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/gl-en_exported_base.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/gl-en_exported_tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/hin_base.tar.gz \
+https://object.pouta.csc.fi/hplt_bitextor_models/hin_tiny.tar.gz \
+https://object.pouta.csc.fi/hplt_bitextor_models/ja-en.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/sw-en_exported_base.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/sw-en_exported_tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/vi-en.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/zho_hans.base.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/zho_hans.tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/zho_hant.base.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/zho_hant.tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/zho_joint.base.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/zho_joint.tiny.zip
