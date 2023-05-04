@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-test -e
+set -e
 
 compute=""
 [[ -n "$CUDA_VISIBLE_DEVICES" ]] \

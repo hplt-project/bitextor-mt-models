@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "files": [
+    "TED2020-v1.en-vi.en.gz",
+    "TED2020-v1.en-vi.vi.gz"
+  ],
+  "filters": [
+    {
+      "filter": "max_word_length",
+      "parameters": {
+        "MAXWORDLENGTH": 150
+      },
+      "language": null
+    },
+    {
+      "filter": "fix_quotes",
+      "parameters": {},
+      "language": null
+    },
+    {
+      "filter": "langid",
+      "parameters": {
+        "SRC_LANG": "vi",
+        "TRG_LANG": "en",
+        "ALLOW_SIMILAR": true,
+        "ALLOW_UNKNOWN": true
+      }
+    }
+  ]
+}

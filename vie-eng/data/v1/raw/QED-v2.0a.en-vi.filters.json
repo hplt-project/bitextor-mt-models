@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "files": [
+    "QED-v2.0a.en-vi.en.gz",
+    "QED-v2.0a.en-vi.vi.gz"
+  ],
+  "filters": [
+    {
+      "filter": "max_word_length",
+      "parameters": {
+        "MAXWORDLENGTH": 150
+      },
+      "language": null
+    },
+    {
+      "filter": "fix_quotes",
+      "parameters": {},
+      "language": null
+    }
+  ]
+}
