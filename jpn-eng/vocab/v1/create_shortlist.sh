@@ -4,15 +4,15 @@ set -eo pipefail
 # Adjust variables if needed.
 MARIAN="/lnet/troja/projects/hplt/marian-dev/build-$(hostname)"
 BERGAMOT_ROOT="/lnet/troja/projects/hplt/bergamot"
+BIN="/lnet/troja/projects/hplt/bin"
 
 SRC="ja"
 TRG="en"
 VOCAB="model.$SRC-$TRG.spm"
 
-CORPUS_SRC="../../data/train/train.$SRC.gz"
-CORPUS_TRG="../../data/train/train.$TRG.gz"
+CORPUS_SRC="../../data/v1/train/train.$SRC.gz"
+CORPUS_TRG="../../data/v1/train/train.$TRG.gz"
 
-BIN="$BERGAMOT_ROOT/students/train-student/alignment/bin"
 test -e $BIN/atools      || exit 1
 test -e $BIN/extract_lex || exit 1
 test -e $BIN/fast_align  || exit 1
@@ -62,9 +62,9 @@ pigz $DIR/lex.s2t
 test -e $DIR/vocab.txt         || $MARIAN/spm_export_vocab --model=$VOCAB --output=$DIR/vocab.txt
 test -e $DIR/lex.s2t.pruned.gz || pigz -dc $DIR/lex.s2t.gz \
     | grep -v NULL \
-    | python3 $BERGAMOT_ROOT/student/train-student/alignment/prune_shortlist.py 100 $DIR/vocab.txt \
+    | python3 $BERGAMOT_ROOT/students/train-student/alignment/prune_shortlist.py 100 $DIR/vocab.txt \
     | pigz \
     > $DIR/lex.s2t.pruned.gz
 
 echo "Outputs:"
-ll $DIR/*.gz
+ls -l $DIR/*.gz
