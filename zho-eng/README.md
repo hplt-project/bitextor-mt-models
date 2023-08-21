@@ -11,94 +11,71 @@
 - zho_Hant-eng: transformer-big and transformer-base
 - zho-eng: transformer-big and transformer-base
 
+| Test set                 | Hans.base |       | Hans.big |       | Hant.big |       | Hant.base |       | Joint.base |       | Joint.big |       |
+|--------------------------|-----------|-------|----------|-------|----------|-------|-----------|-------|------------|-------|-----------|-------|
+|                          | BLEU      | COMET | BLEU     | COMET | BLEU     | COMET | BLEU      | COMET | BLEU       | COMET | BLEU      | COMET |
+| newsdev2017              | 24.6      | 0.842 | 26.6     | 0.851 | 8.2      | 0.546 | 8.1       | 0.543 | 25.2       | 0.829 | 27.9      | 0.836 |
+| newstest2017             | 27.2      | 0.835 | 29.6     | 0.843 | 9.9      | 0.553 | 9.7       | 0.547 | 28.9       | 0.822 | 31.1      | 0.830 |
+| newstest2018             | 27.2      | 0.824 | 29.8     | 0.830 | 9.0      | 0.535 | 8.8       | 0.530 | 28.7       | 0.821 | 30.9      | 0.829 |
+| newstest2019             | 30.5      | 0.824 | 33.8     | 0.830 | 10.7     | 0.515 | 10.0      | 0.515 | 34.1       | 0.819 | 37.1      | 0.827 |
+| newstest2020             | 30.5      | 0.788 | 32.3     | 0.792 | 9.7      | 0.508 | 9.9       | 0.504 | 32.9       | 0.809 | 34.5      | 0.816 |
+| newstest2021             | 24.9      | 0.812 | 26.7     | 0.817 | 8.8      | 0.539 | 8.9       | 0.536 | 26.6       | 0.804 | 28.2      | 0.810 |
+| newstestB2020            | 24.3      | 0.779 | 25.9     | 0.783 | 8.1      | 0.507 | 8.2       | 0.503 | 26.1       | 0.800 | 27.5      | 0.807 |
+| tatoeba-test-v2020-07-28 | 28.2      | 0.769 | 29.5     | 0.767 | 28.0     | 0.759 | 26.4      | 0.765 | 38.3       | 0.876 | 40.5      | 0.884 |
+| tatoeba-test-v2021-03-30 | 28.2      | 0.769 | 29.5     | 0.767 | 27.8     | 0.758 | 26.3      | 0.764 | 38.2       | 0.876 | 40.5      | 0.883 |
+| tatoeba-test-v2021-08-07 | 28.3      | 0.892 | 29.6     | 0.897 | 27.7     | 0.757 | 26.2      | 0.762 | 38.2       | 0.876 | 40.4      | 0.883 |
+| tico19-test              | 30.8      | 0.855 | 33.2     | 0.865 | 13.5     | 0.635 | 13.1      | 0.634 | 32.2       | 0.864 | 35.4      | 0.872 |
+| flores200.dev            | 28.0      | 0.862 | 29.7     | 0.866 | 10.6     | 0.580 | 10.7      | 0.579 | 30.0       | 0.866 | 31.3      | 0.869 |
+| flores200.devtest        | 28.3      | 0.865 | 29.8     | 0.866 | 10.6     | 0.592 | 11.0      | 0.588 | 28.6       | 0.867 | 30.7      | 0.872 |
+| flores200.dev            | 10.1      | 0.855 | 10.3     | 0.859 | 27.8     | 0.841 | 26.0      | 0.848 | 27.6       | 0.854 | 29.3      | 0.860 |
+| flores200.devtest        | 10.0      | 0.855 | 9.9      | 0.860 | 27.0     | 0.842 | 25.2      | 0.848 | 26.5       | 0.854 | 28.2      | 0.859 |
+| Avg.                     | 25.4      | 0.828 | 27.1     | 0.833 | 15.8     | 0.631 | 15.2      | 0.631 | 30.8       | 0.842 | 32.9      | 0.849 |
+
+
 ## Student models
-```
-├── zho-eng 
-│   ├── joint.base.base.zip
-│   └── joint.base.tiny11.zip
-├── zho_Hans-eng
-│   ├── dirtycleanmed.tea.big.stu.base.spm0.1.omit.fb.zip
-│   └── dirtycleanmed.tea.big.stu.tiny11.spm0.1.omit.fb.zip
-└── zho_Hant-eng
-    ├── hant.big.base.zip
-    └── hant.big.tiny11.zip
-```
 
-Joint zho-eng model distilled from transformer-big teacher had poor performance and marian on LUMI refused to train and translate for me. Waiting for the queue to train models distilled from big teachers. But students distilled from base teachers got satisfactory performance.
+### Student base
 
-Student models available at puhti: `/scratch/project_2005815/model_release/zho-eng`
+| Test set                 | Hans.base.base |       | Hans.big.base |       | Hant.base.base |       | Hant.big.base |       | Joint.base.base |       | Joint.big.base |       |   |
+|--------------------------|----------------|-------|---------------|-------|----------------|-------|---------------|-------|-----------------|-------|----------------|-------|---|
+|                          | BLEU           | COMET | BLEU          | COMET | BLEU           | COMET | BLEU          | COMET | BLEU            | COMET | BLEU           | COMET |   |
+| newsdev2017              | 23.7           | 0.818 | 24.9          | 0.821 | 7.4            | 0.494 | 7.5           | 0.493 | 23.5            | 0.817 | 23.8           | 0.816 |   |
+| newstest2017             | 27.0           | 0.810 | 28.2          | 0.813 | 9.0            | 0.505 | 9.3           | 0.501 | 27.4            | 0.811 | 26.9           | 0.810 |   |
+| newstest2018             | 26.4           | 0.810 | 27.6          | 0.813 | 8.1            | 0.491 | 8.4           | 0.487 | 26.4            | 0.809 | 26.7           | 0.809 |   |
+| newstest2019             | 29.9           | 0.802 | 32.0          | 0.804 | 9.4            | 0.475 | 9.2           | 0.476 | 31.6            | 0.805 | 31.7           | 0.803 |   |
+| newstest2020             | 29.9           | 0.795 | 30.9          | 0.798 | 9.3            | 0.470 | 9.1           | 0.467 | 30.6            | 0.797 | 30.5           | 0.794 |   |
+| newstest2021             | 24.2           | 0.792 | 25.0          | 0.794 | 8.2            | 0.499 | 8.4           | 0.498 | 24.8            | 0.792 | 24.6           | 0.790 |   |
+| newstestB2020            | 23.8           | 0.786 | 24.6          | 0.789 | 7.6            | 0.470 | 7.4           | 0.467 | 24.4            | 0.788 | 24.3           | 0.786 |   |
+| tatoeba-test-v2020-07-28 | 27.3           | 0.755 | 27.8          | 0.753 | 25.7           | 0.735 | 25.4          | 0.732 | 36.5            | 0.867 | 36.6           | 0.864 |   |
+| tatoeba-test-v2021-03-30 | 27.4           | 0.755 | 27.8          | 0.753 | 25.5           | 0.734 | 25.3          | 0.731 | 36.5            | 0.867 | 36.6           | 0.864 |   |
+| tatoeba-test-v2021-08-07 | 27.5           | 0.756 | 27.9          | 0.755 | 25.4           | 0.733 | 25.2          | 0.730 | 36.5            | 0.867 | 36.6           | 0.864 |   |
+| tico19-test              | 30.1           | 0.852 | 31.1          | 0.855 | 12.0           | 0.577 | 12.0          | 0.572 | 30.2            | 0.855 | 30.2           | 0.854 |   |
+| flores200.dev            | 27.3           | 0.854 | 28.6          | 0.856 | 10.3           | 0.528 | 10.4          | 0.524 | 27.7            | 0.856 | 27.8           | 0.854 |   |
+| flores200.devtest        | 27.6           | 0.857 | 27.9          | 0.857 | 9.8            | 0.532 | 9.8           | 0.530 | 27.1            | 0.856 | 27.3           | 0.855 |   |
+| flores200.dev            | 9.6            | 0.533 | 9.8           | 0.528 | 24.2           | 0.820 | 24.9          | 0.822 | 25.9            | 0.839 | 25.6           | 0.834 |   |
+| flores200.devtest        | 9.2            | 0.540 | 9.5           | 0.535 | 23.9           | 0.825 | 24.2          | 0.824 | 24.4            | 0.841 | 24.7           | 0.838 |   |
+| AVG                      | 24.7           | 0.768 | 25.6          | 0.768 | 14.4           | 0.593 | 14.4          | 0.590 | 28.9            | 0.831 | 28.9           | 0.829 |   |
+|                          |                |       |               |       |                |       |               |       |                 |       |                |       |   |
 
-- Better performance on `Hans`, worse performance on `Hant` than opusTC models
-- teacher models (`trans_big_zhen`, `trans_base_zhen`) and student models are trained with `Hans`. Therefore, poor performance on `Hant`.
-- tatoeba-test contains both simplified and traditional Chinese. Thus, Hans students get worse BLEU scores than opusTC models.
+### Student tiny
 
-configs:
-
-- `stu.base`: base student model
-- spm: `sentencepiece-alphas`
-- omit: `output-omit-bias: true`
-- fb: `sentencepiece-options: '--byte_fallback true’`
-
-| exp_name | newsdev2017 | newstest2017 | newstest2018 | newstest2019 | newstest2020 | newstest2021 | newstestB2020 | tatoeba-test-v2020-07-28 | tatoeba-test-v2021-03-30 | tatoeba-test-v2021-08-07 | tico19-test | flores200 Hans dev | flores200 Hans devtest | flores200 Hant dev | flores200 Hant devtest | avg |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| trans_big_zhen (teacher) | 26.6 | 29.6 | 29.8 | 33.8 | 32.3 | 26.7 | 25.9 | 29.5 | 29.5 | 29.6 | 33.2 | 29.7 | 29.8 | 10.3 | 9.9 | 29.7 |
-| trans_base_zhen (teacher) | 24.6 | 27.2 | 27.2 | 30.5 | 30.5 | 24.9 | 24.3 | 28.2 | 28.2 | 28.3 | 30.8 | 28.0 | 28.3 | 10.1 | 10.0 | 27.7 |
-| opusTCv20210807+nopar+ft95-sepvoc_transformer-small-align_2023-03-16 | 18.0 | 19.9 | 18.9 | 21.4 | 21.1 | 18.1 | 17.3 | 33.8 | 33.8 | 33.8 | 24.1 | 21.7 | 21.3 | 19 | 18.5 | 23.7 |
-| opusTCv20210807+nopar+ft95-sepvoc_transformer-tiny11-align_2023-03-16 | 17.8 | 19.9 | 18.4 | 21.2 | 20.6 | 17.6 | 16.7 | 33.1 | 33.0 | 33.1 | 23.7 | 21.0 | 20.3 | 18.3 | 17.5 | 23.2 |
-| dirtycleanmed.tea.base.stu.base.spm0.1.omit | 23.7 | 26.9 | 26.3 | 29.9 | 29.8 | 24.1 | 23.9 | 27.5 | 27.5 | 27.6 | 29.7 | 27.3 | 27.5 | 9.5 | 9.1 | 27.0 |
-| dirtycleanmed.tea.base.stu.base.spm0.1.omit.fb | 23.8 | 26.9 | 26.3 | 30.2 | 29.6 | 24.1 | 23.6 | 27.1 | 27.2 | 27.3 | 29.8 | 27.4 | 27.4 | 9.5 | 9.3 | 26.9 |
-| dirtycleanmed.tea.base.stu.base.spm0.omit | 23.9 | 26.9 | 26.3 | 29.9 | 29.6 | 24.1 | 23.5 | 27.3 | 27.3 | 27.4 | 29.6 | 27.7 | 27.5 | 9.4 | 9.3 | 26.9 |
-| dirtycleanmed.tea.base.stu.tiny11.spm0.1.omit | 21.8 | 24.4 | 23.8 | 26.9 | 26.7 | 21.5 | 21.5 | 25.4 | 25.5 | 25.6 | 27.0 | 25.8 | 25.4 | 8.4 | 8.2 | 24.6 |
-| dirtycleanmed.tea.base.stu.tiny11.spm0.1.omit.fb | 21.7 | 24.6 | 23.8 | 27.1 | 26.7 | 21.5 | 21.5 | 25.5 | 25.6 | 25.7 | 27.2 | 25.7 | 25.7 | 8.3 | 8.3 | 24.6 |
-| dirtycleanmed.tea.base.stu.tiny11.spm0.omit | 21.1 | 24.3 | 23.2 | 26.0 | 25.8 | 21.1 | 20.8 | 25.3 | 25.3 | 25.4 | 26.5 | 25.2 | 24.9 | 8.0 | 7.8 | 24.1 |
-| dirtycleanmed.tea.big.stu.base.spm0.1.omit | 24.7 | 28.0 | 27.5 | 32.0 | 30.7 | 25.1 | 24.6 | 27.8 | 27.8 | 27.9 | 30.6 | 28.5 | 28.0 | 9.5 | 9.1 | 27.9 |
-| dirtycleanmed.tea.big.stu.base.spm0.1.omit.fb | 24.8 | 28.3 | 27.6 | 32.0 | 30.8 | 25.0 | 24.5 | 27.7 | 27.7 | 27.8 | 31.1 | 28.8 | 28.0 | 9.7 | 9.5 | 27.9 |
-| dirtycleanmed.tea.big.stu.base.spm0.omit | 24.6 | 27.8 | 27.6 | 31.3 | 30.6 | 24.6 | 24.6 | 27.5 | 27.6 | 27.7 | 30.7 | 28.4 | 28.1 | 9.6 | 9.0 | 27.7 |
-| dirtycleanmed.tea.big.stu.tiny11.spm0.1.omit | 22.3 | 25.5 | 24.5 | 27.9 | 27.1 | 21.7 | 22.0 | 25.9 | 25.9 | 26.0 | 27.8 | 26.1 | 25.5 | 8.2 | 7.9 | 25.1 |
-| dirtycleanmed.tea.big.stu.tiny11.spm0.1.omit.fb | 22.1 | 24.9 | 24.4 | 28.0 | 26.8 | 21.4 | 21.8 | 25.8 | 25.8 | 25.9 | 27.4 | 25.8 | 25.4 | 8.2 | 7.7 | 24.9 |
-| dirtycleanmed.tea.big.stu.tiny11.spm0.omit | 22.3 | 25.6 | 24.6 | 27.8 | 26.9 | 21.5 | 21.9 | 25.6 | 25.7 | 25.8 | 27.8 | 25.9 | 25.7 | 8.3 | 8.4 | 25.0 |
-
-## Results of Hant with hanzi-convert
-
-Results obtained with hanzi-convert, i.e., Hant dev text are converted to Hans and evaluated with Hans student models. 
-
-| Model | flores200 Hant dev | flores200 Hant devtest |
-| --- | --- | --- |
-| opusTCv20210807+nopar+ft95-sepvoc_transformer-small-align_2023-03-16 | 19 | 18.5 |
-| opusTCv20210807+nopar+ft95-sepvoc_transformer-tiny11-align_2023-03-16 | 18.3 | 17.5 |
-| trans_base_zhen | 27.4 | 26.5 |
-| dirtycleanmed.tea.base.stu.base.spm0.1.omit | 26.3 | 25.7 |
-| dirtycleanmed.tea.base.stu.base.spm0.1.omit.fb | 26.5 | 25.4 |
-| dirtycleanmed.tea.base.stu.base.spm0.omit | 26.7 | 25.2 |
-| dirtycleanmed.tea.base.stu.tiny11.spm0.1.omit | 24.3 | 23.2 |
-| dirtycleanmed.tea.base.stu.tiny11.spm0.1.omit.fb | 24.0 | 23.3 |
-| dirtycleanmed.tea.base.stu.tiny11.spm0.omit | 24.1 | 23.1 |
-| trans_big_zhen | 28.8 | 28.1 |
-| dirtycleanmed.tea.big.stu.base.spm0.1.omit | 27.0 | 26.0 |
-| dirtycleanmed.tea.big.stu.base.spm0.1.omit.fb | 27.1 | 26.0 |
-| dirtycleanmed.tea.big.stu.base.spm0.omit | 27.2 | 26.0 |
-| dirtycleanmed.tea.big.stu.tiny11.spm0.1.omit | 24.5 | 23.3 |
-| dirtycleanmed.tea.big.stu.tiny11.spm0.1.omit.fb | 24.1 | 23.4 |
-| dirtycleanmed.tea.big.stu.tiny11.spm0.omit | 24.0 | 23.7 |
-
-## Results of joint models
-
-| exp_name | newsdev2017 | newstest2017 | newstest2018 | newstest2019 | newstest2020 | newstest2021 | newstestB2020 | tatoeba-test-v2020-07-28 | tatoeba-test-v2021-03-30 | tatoeba-test-v2021-08-07 | tico19-test | flores200 Hans dev | flores200 Hans devtest | flores200 Hant dev | flores200 Hant devtest | avg |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| dirtycleanmed.tea.base.stu.base.spm0.1.omit.fb | 23.7 | 27.4 | 26.4 | 31.5 | 30.5 | 24.7 | 24.3 | 36.5 | 36.5 | 36.5 | 30.5 | 27.6 | 27.2 | 25.8 | 24.4 | 28.9 |
-| dirtycleanmed.tea.base.stu.tiny11.spm0.1.omit.fb | 21.7 | 24.8 | 23.9 | 27.7 | 27.4 | 21.9 | 21.8 | 34.4 | 34.3 | 34.4 | 27.4 | 25.4 | 25.3 | 23.1 | 22.5 | 26.4 |
-| dirtycleanmed.tea.big.stu.base.spm0.1.omit.fb | 12.2 | 14.3 | 12.6 | 13.7 | 14.1 | 11.4 | 11.7 | 24.0 | 23.9 | 24.0 | 15.1 | 15.4 | 14.7 | 13.6 | 13.3 | 15.6 |
-| dirtycleanmed.tea.big.stu.tiny11.spm0.1.omit.fb | 7.8 | 8.2 | 7.5 | 7.5 | 7.3 | 6.8 | 6.3 | 17.0 | 17.0 | 17.0 | 7.5 | 8.6 | 8.7 | 8.3 | 7.8 | 9.6 |
-
-# Teacher model
-
-Tatoeba-test contains mixture of simplified and traditional Chinese
-
-| exp_name | newsdev2017 | newstest2017 | newstest2018 | newstest2019 | newstest2020 | newstest2021 | newstestB2020 | tatoeba-test-v2020-07-28 | tatoeba-test-v2021-03-30 | tatoeba-test-v2021-08-07 | tico19-test | flores200 Hans dev | flores200 Hans devtest | flores200 Hant dev | flores200 Hant devtest | avg |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| trans_big_zhen (hans teacher) | 26.6 | 29.6 | 29.8 | 33.8 | 32.3 | 26.7 | 25.9 | 29.5 | 29.5 | 29.6 | 33.2 | 29.7 | 29.8 | 10.3 | 9.9 | 29.7 |
-| trans.big.dirtycleanmed.hant/model | 8.8 | 10.5 | 9.6 | 10.8 | 10.0 | 9.3 | 8.4 | 27.2 | 27.0 | 26.9 | 14.0 | 11.1 | 10.9 | 26.6 | 26.3 | 15.8 |
-| trans.big.dirtycleanmed.zhen.joint/model | 26.1 | 29.3 | 29.2 | 34.8 | 33.3 | 26.8 | 26.3 | 38.7 | 38.6 | 38.6 | 32.6 | 29.6 | 29.0 | 27.5 | 27.2 | 31.2 |
-| trans_base_zhen (hans teacher) | 24.6 | 27.2 | 27.2 | 30.5 | 30.5 | 24.9 | 24.3 | 28.2 | 28.2 | 28.3 | 30.8 | 28.0 | 28.3 | 10.1 | 10.0 | 27.7 |
-| trans.base.dirtycleanmed.hant/model | 7.9 | 9.6 | 8.5 | 10.0 | 9.5 | 8.9 | 8.0 | 26.4 | 26.2 | 26.1 | 13.1 | 10.6 | 10.8 | 25.5 | 24.9 | 15.1 |
-| trans.base.dirtycleanmed.zhen.joint/model | 24.8 | 28.3 | 27.7 | 33.1 | 32.1 | 26.0 | 25.7 | 37.8 | 37.7 | 37.7 | 31.5 | 28.9 | 28.1 | 26.7 | 26.0 | 30.1 |
+| Test set                 | Hans.base.tiny11 |       | Hans.big.tiny11 |       | Hant.base.tiny11 |       | Hant.big.tiny11 |       | Joint.base.tiny11 |       | Joint.big.tiny11 |       |   |
+|--------------------------|------------------|-------|-----------------|-------|------------------|-------|-----------------|-------|-------------------|-------|------------------|-------|---|
+|                          | BLEU             | COMET | BLEU            | COMET | BLEU             | COMET | BLEU            | COMET | BLEU              | COMET | BLEU             | COMET |   |
+| newsdev2017              | 21.6             | 0.799 | 22.4            | 0.798 | 6.7              | 0.475 | 6.8             | 0.463 | 21.6              | 0.797 | 20.8             | 0.789 |   |
+| newstest2017             | 24.7             | 0.792 | 25.5            | 0.792 | 8.4              | 0.487 | 8.1             | 0.476 | 24.8              | 0.792 | 24.6             | 0.785 |   |
+| newstest2018             | 24.0             | 0.791 | 24.5            | 0.790 | 7.6              | 0.476 | 7.6             | 0.467 | 23.8              | 0.789 | 23.5             | 0.783 |   |
+| newstest2019             | 26.8             | 0.778 | 27.9            | 0.778 | 8.7              | 0.461 | 8.6             | 0.456 | 27.6              | 0.779 | 27.2             | 0.771 |   |
+| newstest2020             | 26.6             | 0.773 | 27.2            | 0.773 | 8.5              | 0.454 | 8.3             | 0.448 | 27.2              | 0.772 | 26.3             | 0.764 |   |
+| newstest2021             | 21.8             | 0.770 | 21.8            | 0.769 | 7.5              | 0.482 | 7.4             | 0.469 | 21.8              | 0.772 | 21.3             | 0.763 |   |
+| newstestB2020            | 21.3             | 0.766 | 22.0            | 0.765 | 7.2              | 0.455 | 7.1             | 0.449 | 21.6              | 0.764 | 21.4             | 0.757 |   |
+| tatoeba-test-v2020-07-28 | 25.5             | 0.734 | 26.0            | 0.732 | 23.3             | 0.715 | 23.2            | 0.703 | 34.4              | 0.853 | 33.7             | 0.849 |   |
+| tatoeba-test-v2021-03-30 | 25.5             | 0.735 | 26.0            | 0.732 | 23.1             | 0.714 | 23.0            | 0.702 | 34.3              | 0.852 | 33.6             | 0.848 |   |
+| tatoeba-test-v2021-08-07 | 25.7             | 0.736 | 26.2            | 0.733 | 23.0             | 0.712 | 23.0            | 0.700 | 34.3              | 0.852 | 33.7             | 0.848 |   |
+| tico19-test              | 27.5             | 0.837 | 27.8            | 0.836 | 10.3             | 0.547 | 10.3            | 0.536 | 27.2              | 0.837 | 26.7             | 0.831 |   |
+| flores200.dev            | 25.4             | 0.839 | 26.1            | 0.839 | 9.1              | 0.502 | 8.7             | 0.489 | 25.5              | 0.839 | 25.0             | 0.832 |   |
+| flores200.devtest        | 25.5             | 0.844 | 25.5            | 0.842 | 9.2              | 0.511 | 8.7             | 0.497 | 25.3              | 0.842 | 24.3             | 0.837 |   |
+| flores200.dev            | 8.2              | 0.495 | 8.3             | 0.491 | 21.9             | 0.795 | 21.8            | 0.793 | 23.3              | 0.819 | 23.4             | 0.812 |   |
+| flores200.devtest        | 8.3              | 0.497 | 7.9             | 0.499 | 21.2             | 0.799 | 21.5            | 0.797 | 22.4              | 0.821 | 21.7             | 0.812 |   |
+| Average                  | 22.6             | 0.746 | 23.0            | 0.745 | 13.0             | 0.572 | 12.9            | 0.563 | 26.3              | 0.812 | 25.8             | 0.805 |   |
+|                          |                  |       |                 |       |                  |       |                 |       |                   |       |                  |       |   |
