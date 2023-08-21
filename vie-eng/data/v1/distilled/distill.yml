@@ -1,0 +1,17 @@
+relative-paths: true
+models:
+  - ../../../teacher/opus4m+btTCv20210807.spm32k-spm32k.transformer.model1.npz.best-perplexity.npz
+vocabs:
+  - ../../../teacher/opus4m+btTCv20210807.spm32k-spm32k.vocab.yml
+  - ../../../teacher/opus4m+btTCv20210807.spm32k-spm32k.vocab.yml
+beam-size: 6
+normalize: 1
+word-penalty: 0
+mini-batch: 8
+# mini-batch-words: 32000
+maxi-batch: 64
+maxi-batch-sort: src
+max-length: 150
+max-length-crop: true
+quiet: true
+quiet-translation: true

@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "files": [
+    "KFTT-v1.0.en-ja.en.gz",
+    "KFTT-v1.0.en-ja.ja.gz"
+  ],
+  "filters": [
+    {
+      "filter": "segment_japanese",
+      "parameters": {},
+      "language": "ja"
+    },
+    {
+      "filter": "max_word_length",
+      "parameters": {
+        "MAXWORDLENGTH": 150
+      },
+      "language": null
+    },
+    {
+      "filter": "fix_quotes",
+      "parameters": {},
+      "language": null
+    },
+    {
+      "filter": "fix_wiki",
+      "parameters": {
+        "ALWAYS": false,
+        "FOOTNOTES": "true",
+        "URLS": "true",
+        "WIKILINKS": "true",
+        "CODE": "true",
+        "HEADINGS": "true",
+        "REMOVEEMPTYLINES": "true"
+      },
+      "language": null
+    },
+    {
+      "filter": "langid",
+      "parameters": {
+        "SRC_LANG": "ja",
+        "TRG_LANG": "en",
+        "ALLOW_SIMILAR": true,
+        "ALLOW_UNKNOWN": true
+      }
+    },
+    {
+      "filter": "bifixer",
+      "parameters": {
+        "SRCLANG": "ja",
+        "TRGLANG": "en",
+        "IGNORE_CHARACTERS": false,
+        "IGNORE_NORMALIZATION": false,
+        "IGNORE_HTML": false,
+        "IGNORE_EMPTY": false,
+        "IGNORE_LONG": false,
+        "IGNORE_ORTHOGRAPHY": false,
+        "IGNORE_DETOKENIZATION": false,
+        "IGNORE_DUPLICATES": false,
+        "AGGRESSIVE_DEDUP": false,
+        "IGNORE_SEGMENTATION": false,
+        "WORDS_BEFORE_SEGMENTING": 15,
+        "SEGMENTER": "",
+        "DEBUG": null
+      },
+      "language": null
+    },
+    {
+      "filter": "bicleaner_hardrules",
+      "parameters": {
+        "LANG1": "ja",
+        "LANG2": "en",
+        "LM_THRESHOLD": 0.5,
+        "DISABLE_LM_FILTER": false,
+        "DISABLE_PORN_REMOVAL": false,
+        "DISABLE_MINIMAL_LENGTH": "false"
+      },
+      "language": null
+    }
+  ]
+}
