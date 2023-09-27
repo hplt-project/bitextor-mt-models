@@ -16,6 +16,8 @@ Configuration files could include:
 # Download models:
 https://object.pouta.csc.fi/hplt_bitextor_models/ara_base.tar.gz \
 https://object.pouta.csc.fi/hplt_bitextor_models/ara_tiny.tar.gz \
+https://object.pouta.csc.fi/hplt_bitextor_models/ca-en_exported_base.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/ca-en_exported_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/eus_base.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/eus_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/gl-en_exported_base.zip \
