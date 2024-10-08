@@ -14,6 +14,12 @@ Configuration files could include:
 - Just notes about which OPUS model you're distilling, using which datasets.
 
 # Download models:
+## v2
+https://object.pouta.csc.fi/hplt_bitextor_models/kor-eng_tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/heb-eng_tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/slk-eng_tiny.zip
+
+## v1
 https://object.pouta.csc.fi/hplt_bitextor_models/ara_base.tar.gz \
 https://object.pouta.csc.fi/hplt_bitextor_models/ara_tiny.tar.gz \
 https://object.pouta.csc.fi/hplt_bitextor_models/ca-en_exported_base.zip \

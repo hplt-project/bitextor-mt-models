@@ -7,6 +7,8 @@ We use an Tatoeba-MT Teacher: [Tatoeba-MT-models/ces+slk-eng/opusTCv20210807+bt_
 # Students
 We used the [OpusDistillery](https://github.com/Helsinki-NLP/OpusDistillery) to train new a new student with the tiny architecture. For training data, we used [Tatoeba](https://github.com/Helsinki-NLP/Tatoeba-Challenge/tree/master/data). The configuration file fed into OpusDistillery can be found [here](https://github.com/Helsinki-NLP/OpusDistillery/blob/main/configs/hplt/config.hplt.slk-eng.yml).
 
+[Download the model.](https://object.pouta.csc.fi/hplt_bitextor_models/slk-eng_tiny.zip)
+
 # Evaluation
 BLEU scores for the teacher and the student.
 
