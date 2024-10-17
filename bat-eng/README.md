@@ -12,17 +12,16 @@ We used the [OpusDistillery](https://github.com/Helsinki-NLP/OpusDistillery) to 
 # Evaluation
 BLEU scores for the teacher and the student.
 
-## Latvian
+### Latvian
 |Model|Flores200-devtest| Model Size |
-|---|---|---|---|
+|---|---|---|
 |Teacher | ? BLEU | 236.9M	 |  - |
 |Student-tiny | 28.1 BLEU / 0.8281 COMET | 17M | - |
 
-
-## Lithuanian
+### Lithuanian
 
 |Model|Flores200-devtest| Model Size |
-|---|---|---|---|
+|---|---|---|
 |Teacher | 33.7 BLEU | 236.9M	 |  - |
 |Student-tiny | 29.5 BLEU / 0.8378 COMET | 17M | - |
 

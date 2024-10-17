@@ -13,7 +13,7 @@ We used the [OpusDistillery](https://github.com/Helsinki-NLP/OpusDistillery) to 
 BLEU scores for the teacher and the student.
 
 |Model|Flores200-devtest| Model Size |
-|---|---|---|---|
+|---|---|---|
 |Teacher | 44 BLEU | 238.1M |  - |
 |Student-tiny | 39.2 BLEU / 0.8534 COMET | 17M | - |
 
