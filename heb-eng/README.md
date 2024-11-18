@@ -5,7 +5,7 @@ We use an Tatoeba-MT Teacher: [Tatoeba-MT-models/heb-eng/opusTCv20210807+bt_tran
 
 
 # Students
-We used the [OpusDistillery](https://github.com/Helsinki-NLP/OpusDistillery) to train new a new student with the tiny architecture. For training data, we used [Tatoeba](https://github.com/Helsinki-NLP/Tatoeba-Challenge/tree/master/data). The configuration file fed into OpusDistillery can be found [here](https://github.com/Helsinki-NLP/OpusDistillery/blob/main/configs/hplt/config.hplt.heb-eng.yml).
+We used the [OpusDistillery](https://github.com/Helsinki-NLP/OpusDistillery) to train a new student with the tiny architecture. For training data, we used [Tatoeba](https://github.com/Helsinki-NLP/Tatoeba-Challenge/tree/master/data). The configuration file fed into OpusDistillery can be found [here](https://github.com/Helsinki-NLP/OpusDistillery/blob/main/configs/hplt/config.hplt.heb-eng.yml).
 
 [Download the model.](https://object.pouta.csc.fi/hplt_bitextor_models/heb-eng_tiny.zip)
 

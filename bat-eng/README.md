@@ -1,11 +1,13 @@
 # Bitextor Latvian/Lithuanian-English models
 
+Multilingual student that translates from Latvian and Lithuanian into English.
+
 # Teacher
 We use an Tatoeba-MT Teacher: [Tatoeba-MT-models/bat-deu+eng+fra+por+spa/opusTCv20230926max50+bt+jhubc_transformer-big_2024-05-30](https://object.pouta.csc.fi/Tatoeba-MT-models/bat-deu+eng+fra+por+spa/opusTCv20230926max50+bt+jhubc_transformer-big_2024-05-30.zip), which has been trained on the [Tatoeba](https://github.com/Helsinki-NLP/Tatoeba-Challenge/tree/master/data) dataset.
 
 
 # Students
-We used the [OpusDistillery](https://github.com/Helsinki-NLP/OpusDistillery) to train new a new student with the tiny architecture. For training data, we used [Tatoeba](https://github.com/Helsinki-NLP/Tatoeba-Challenge/tree/master/data).
+We used the [OpusDistillery](https://github.com/Helsinki-NLP/OpusDistillery) to train a new student with the tiny architecture. For training data, we used [Tatoeba](https://github.com/Helsinki-NLP/Tatoeba-Challenge/tree/master/data).
 
 [Download the model.](https://object.pouta.csc.fi/hplt_bitextor_models/bat-eng_tiny.zip)
 
