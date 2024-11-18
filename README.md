@@ -19,8 +19,8 @@ https://object.pouta.csc.fi/hplt_bitextor_models/bat-eng_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/heb-eng_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/kor-eng_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/slk-eng_tiny.zip \
-https://object.pouta.csc.fi/hplt_bitextor_models/trk-eng_tiny.zip \
-https://object.pouta.csc.fi/hplt_bitextor_models/zsm-eng_tiny.zip 
+https://object.pouta.csc.fi/hplt_bitextor_models/trk-eng.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/zsm-eng.zip 
 
 ## v1
 https://object.pouta.csc.fi/hplt_bitextor_models/ara_base.tar.gz \

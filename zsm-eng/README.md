@@ -9,7 +9,7 @@ We use an Tatoeba-MT Teacher: [Tatoeba-MT-models/pqw-deu+eng+fra+por+spa/opusTCv
 # Students
 We used the [OpusDistillery](https://github.com/Helsinki-NLP/OpusDistillery) to train a new student with the tiny architecture. For training data, we used [Tatoeba](https://github.com/Helsinki-NLP/Tatoeba-Challenge/tree/master/data). 
 
-[Download the model.](https://object.pouta.csc.fi/hplt_bitextor_models/zsm-eng_tiny.zip)
+[Download the model.](https://object.pouta.csc.fi/hplt_bitextor_models/zsm-eng.zip)
 
 # Evaluation
 BLEU scores for the teacher and the student.
