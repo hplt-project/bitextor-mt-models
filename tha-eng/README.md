@@ -15,7 +15,7 @@ BLEU scores for the teacher and the student.
 |Model|Flores200-devtest| Model Size |
 |---|---|---|
 |Teacher | 27.1 BLEU | 234.5M |  - |
-|Student-tiny | 19.7 BLEU / 0.7856 COMET | 17M | - |
+|Student-tiny | 20.1 BLEU / 0.7856 COMET | 17M | - |
 
 # How to run
 1. Compile [browser-mt/marian-dev](https://github.com/browsermt/marian-dev)
