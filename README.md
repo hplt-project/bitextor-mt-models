@@ -15,8 +15,11 @@ Configuration files could include:
 
 # Download models:
 ## v2
+https://object.pouta.csc.fi/hplt_bitextor_models/afr-eng_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/bat-eng_tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/dra-eng_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/heb-eng_tiny.zip \
+https://object.pouta.csc.fi/hplt_bitextor_models/inc-eng_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/kor-eng_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/slk-eng_tiny.zip \
 https://object.pouta.csc.fi/hplt_bitextor_models/tha-eng.zip \
