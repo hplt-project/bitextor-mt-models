@@ -1,0 +1,17 @@
+{
+    "models": [
+        {
+            "modelName": "Slovak-English tiny",
+            "shortName": "sk-en-tiny",
+            "type": "tiny",
+            "src": "Slovak",
+            "trg": "English",
+            "version": 1.0,
+            "API": 1.0,
+            "checksum": "2d6f36d8dc8ec9ffebaf4bc3a9eae1222f09349a0d54cca38d2389fce48c0db2",
+            "url": "https://object.pouta.csc.fi/hplt_bitextor_models/slk-eng_tiny.zip",
+            "name": "Slovak-English tiny",
+            "code": "sk-en-tiny"
+        }
+    ]
+}
