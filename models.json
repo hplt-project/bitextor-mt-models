@@ -12,6 +12,19 @@
             "url": "https://object.pouta.csc.fi/hplt_bitextor_models/slk-eng_tiny.zip",
             "name": "Slovak-English tiny",
             "code": "sk-en-tiny"
+        },
+        {
+            "modelName": "Arabic-English tiny",
+            "shortName": "ar-en-tiny",
+            "type": "tiny",
+            "src": "Arabic",
+            "trg": "English",
+            "version": 1.0,
+            "API": 1.0,
+            "checksum": "060487a47421ed8801472a6f885a5d79b883cd5611af7f131925c239faf934a2",
+            "url": "https://object.pouta.csc.fi/hplt_bitextor_models/ara_tiny.tar.gz",
+            "name": "Arabic-English tiny",
+            "code": "ar-en-tiny"
         }
     ]
 }
