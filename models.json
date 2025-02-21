@@ -123,7 +123,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "1b2ba16c92ac682d69a25daceba3e74fa799b53b27f80fc9f618341cacca11ae",
+            "checksum": "444c9ce1113ec844fc7102dece7ce7c88707f81bd06f44dd1cf54ce9c766a969",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/hin-eng.tar.gz",
             "name": "Hindi-English tiny",
             "code": "hi-en-tiny"
