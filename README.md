@@ -59,6 +59,7 @@ https://object.pouta.csc.fi/hplt_bitextor_models/zho_joint.tiny.zip
 
 ## Citation
 
+```
 If you use any of these models in a scientific publication, use the following citations:
 @inproceedings{fastNMT,
     title = "{M}ind the {G}ap: {D}iverse {NMT} {M}odels for {R}esource-{C}onstrained {E}nvironments",
@@ -71,3 +72,4 @@ If you use any of these models in a scientific publication, use the following ci
     year = "2025",
     address = "Tallinn, Estonia"
 }
+```
