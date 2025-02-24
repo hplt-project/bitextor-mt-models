@@ -49,6 +49,22 @@
             "code": "bat-en-tiny"
           },
           {
+            "modelName": "Catalan-English tiny",
+            "shortName": "ca-en-tiny",
+            "type":      "tiny",
+            "src":       "Catalan",
+            "trg":       "English",
+            "srcTags":   {"ca": "Catalan"},
+            "trgTag":    "en",
+            "repository": "HPLT",
+            "version":   1,
+            "API":       1,
+            "checksum": "6ac07b5ba9ab6be86228fe34057eddd7b61bc70cda3b3d28d3b78a97017cd007",
+            "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/cat-eng.tar.gz",
+            "name": "Catalan-English tiny",
+            "code": "ca-en-tiny"
+          },
+          {
             "modelName": "Dradivian-English tiny",
             "shortName": "dra-en-tiny",
             "type":      "tiny",
@@ -107,7 +123,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "2c9ff03962399ec15153238050f3e6f29aa647c5b07a2da57f50442235bdb2c9",
+            "checksum": "eea9250f547c5299491fc8970dfdef8348a5709a29032b895b0a39c430ee4edf",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/heb-eng.tar.gz",
             "name": "Hebrew-English tiny",
             "code": "he-en-tiny"
@@ -283,7 +299,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "e229718332c24a7ec1cfe25999fc492fc50a499af64629faf2afe0406a516f51",
+            "checksum": "c7003c1ddc5b5dcf5cc1f07ce649fb39245fdb734facaeddd992e215562193d4",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/zle-eng.tar.gz",
             "name": "East Slavic-English tiny",
             "code": "zle-en-tiny"
