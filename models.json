@@ -11,7 +11,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "dfb322f4269e9569aa6e26f198e73c8fb64ff2f6b3473b35677f094121e59b0a",
+            "checksum": "b9e501d5d83c50189bd8685585d9b9bf6deeb25228e18b7b946e16386583dfdb",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/afr-eng.tar.gz",
             "name": "Afrikaans-English tiny",
             "code": "af-en-tiny"
@@ -27,7 +27,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "6ab2145f9c76e5c67eabdcc3e677dad803f37996ee5d7d471d5f9b5da4beddf7",
+            "checksum": "cb4933a07645f5c51ca226e1682f4fd6e4635b537bceb4f37d4eb2fd5afb4285",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/ara-eng.tar.gz",
             "name": "Arabic-English tiny",
             "code": "ar-en-tiny"
@@ -43,7 +43,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "434ae9ec788515eec934b32224a3cfc076687500322844b9823832a7d2d5d660",
+            "checksum": "222282fa577ee2f9261e4c00baea150943a091c0bd4aa0637370325adebcb7e0",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/bat-eng.tar.gz",
             "name": "Baltic-English tiny",
             "code": "bat-en-tiny"
@@ -59,7 +59,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "b55ff2b312ecd4dc26367b1dd4dac9882d079a804693e6207c1e3eafa0abfd42",
+            "checksum": "2e4f58b11ec11aec787e00ff4f0c303f6594c66a531597561625e90f94c4ec08",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/dra-eng.tar.gz",
             "name": "Dradivian-English tiny",
             "code": "dra-en-tiny"
@@ -75,7 +75,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "a723062efb2767d798592746997dfca5506bac59df1ddc38c869ed6b382ffbe5",
+            "checksum": "067e269267c14cf31960eeb26f0a8564035f6d89a22908f6bc4aa2aeef7f38df",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/eus-eng.tar.gz",
             "name": "Basque-English tiny",
             "code": "eu-en-tiny"
@@ -91,7 +91,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "7e4bb2982dd17ec37b627be4cec53be47eb8356ae8be7cc4299994aaf9f2bab0",
+            "checksum": "62eca536358a91e508e354dd5500c8d7285faf82ff195f8ac5514e50122052a6",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/glg-eng.tar.gz",
             "name": "Galician-English tiny",
             "code": "gl-en-tiny"
@@ -107,7 +107,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "3741238499450e6432c0bd8777feddce35bbdbf2a0da14d39577a6991bf7d693",
+            "checksum": "2c9ff03962399ec15153238050f3e6f29aa647c5b07a2da57f50442235bdb2c9",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/heb-eng.tar.gz",
             "name": "Hebrew-English tiny",
             "code": "he-en-tiny"
@@ -123,7 +123,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "444c9ce1113ec844fc7102dece7ce7c88707f81bd06f44dd1cf54ce9c766a969",
+            "checksum": "badd119d3360e332706b91faeba7fc2e22054420f99a1418848dd299719d0cea",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/hin-eng.tar.gz",
             "name": "Hindi-English tiny",
             "code": "hi-en-tiny"
@@ -139,7 +139,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "07c978e40324830ae9d0fed64b6969d47bec1f5523f492b3778bee96afd08529",
+            "checksum": "1784284fe6ca1912eefbfedf815b7d5a29ecea6ba9e41f92d339a9cb71ae4bc7",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/inc-eng.tar.gz",
             "name": "Indic-English tiny",
             "code": "inc-en-tiny"
@@ -155,7 +155,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "dba40201acb6f4a5967ea11a46f1ea18a08a1163b42d89b7f0fd123699d9e81a",
+            "checksum": "33641318b90993bbe340c32aa0663ea7df313e7c43389da8c72685774390d4a5",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/jpn-eng.tar.gz",
             "name": "Japanese-English tiny",
             "code": "ja-en-tiny"
@@ -171,7 +171,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "b6899ba6b05f54f5d77f4ba0adb3586edcbf89e1b85e65013f74606734b233b9",
+            "checksum": "75016f2753f169f8757cc117a0a7bd1244a5a111e2ac654be63ebddb74d38a8b",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/kor-eng.tar.gz",
             "name": "Korean-English tiny",
             "code": "ko-en-tiny"
@@ -187,7 +187,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "0eb9b0fc59aefac4e532dc373c2f9a297ebf1affb9a570594a95bff50e78c930",
+            "checksum": "55531e756c608c891d1ae8d7b3ee1a06af27bc0723e0d356b3e21cea508971bb",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/sin-eng.tar.gz",
             "name": "Sinhala-English tiny",
             "code": "si-en-tiny"
@@ -203,7 +203,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "44c9f34194fa2b634cd7b660c4b8c6341985c93060587dc811f698bf579219a0",
+            "checksum": "45101b10e5d4385fbe26c5ed9e795cec1e726646be18c02579bf0217edd74d13",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/slk-eng.tar.gz",
             "name": "Slovak-English tiny",
             "code": "sk-en-tiny"
@@ -219,7 +219,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "90155368c70e5a4f460caf599ae22bc4aacb068e8ad458f70ab1fa26afb80c59",
+            "checksum": "ad2dfbe8e88385ba1c19cb7007d7fa9370dc04c6c8e6a1a0b245c058b526cae0",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/swh-eng.tar.gz",
             "name": "Swahili-English tiny",
             "code": "sw-en-tiny"
@@ -235,7 +235,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "75c9654bceffdbeedc4c38afb4738f3ab44f66261ee8ae267f7cda4c19c4c3fc",
+            "checksum": "ec8a314d81bdf045d55b394f51e31b76f45b289c88ac3575c66aeab4e575d728",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/tha-eng.tar.gz",
             "name": "Thai-English tiny",
             "code": "th-en-tiny"
@@ -251,7 +251,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "e367e6a5bd189bed4f8603f3418549785b0308165c8336b0bdb96b323bbb8bf3",
+            "checksum": "2560428301976ab82459b16012c30a19eb02b12fd7dcc4142a5a292670db209b",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/trk-eng.tar.gz",
             "name": "Turkic-English tiny",
             "code": "trk-en-tiny"
@@ -267,7 +267,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "de5372b9b062a5ce82b7226787fea2a135853d75a3fe5a915fc859069131a442",
+            "checksum": "df295b3081fc4300c9f2276e9e5f247cbd5fc087499bf234ddede809639b77e7",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/vie-eng.tar.gz",
             "name": "Vietnamese-English tiny",
             "code": "vi-en-tiny"
@@ -283,7 +283,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "71495f514af82c4a459e73e238a1979d2f76316f2dd30ae52717a7b9d237e0fe",
+            "checksum": "e229718332c24a7ec1cfe25999fc492fc50a499af64629faf2afe0406a516f51",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/zle-eng.tar.gz",
             "name": "East Slavic-English tiny",
             "code": "zle-en-tiny"
@@ -299,7 +299,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "3ebf8fc4ca83355f08607de9c43191d36d821cfdf31946bbe13f0a9a94f44041",
+            "checksum": "e800511b71e00ed97587efefc0670362165f351a6868dbde70a2edeff3718663",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/zsm-eng.tar.gz",
             "name": "Malay-English tiny",
             "code": "ml-en-tiny"
