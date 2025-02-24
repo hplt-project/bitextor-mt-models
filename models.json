@@ -11,7 +11,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "b9e501d5d83c50189bd8685585d9b9bf6deeb25228e18b7b946e16386583dfdb",
+            "checksum": "725fd250fa6ac765e9acb5a8a5ec0df91b9a97bae21786249895fd6d7569d8a6",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/afr-eng.tar.gz",
             "name": "Afrikaans-English tiny",
             "code": "af-en-tiny"
