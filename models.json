@@ -59,7 +59,7 @@
             "repository": "HPLT",
             "version":   1,
             "API":       1,
-            "checksum": "6ac07b5ba9ab6be86228fe34057eddd7b61bc70cda3b3d28d3b78a97017cd007",
+            "checksum": "3d35a6b479e75a43222b514d6aa6fade12676e817eb850f19b1958d6cfe8327d",
             "url": "https://object.pouta.csc.fi/HPLT-bitextor-models/cat-eng.tar.gz",
             "name": "Catalan-English tiny",
             "code": "ca-en-tiny"
