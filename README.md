@@ -13,6 +13,11 @@ Configuration files could include:
 - bergamot pipeline configurations
 - Just notes about which OPUS model you're distilling, using which datasets.
 
+# Use models with TranslateLocally
+[TranslateLocally](https://github.com/XapaJIaMnu/translateLocally) is a fast and secure translation tool that runs on your local machine with a GUI, powered by marian and Bergamot. Compile it as described in their repository README and then add the HPLT repository. You can add a custom repository from the Translator Settings->Repositories menu. Details are below:
+- Name: HPLT
+- URL: [https://raw.githubusercontent.com/hplt-project/bitextor-mt-models/refs/heads/main/models.json](https://raw.githubusercontent.com/hplt-project/bitextor-mt-models/refs/heads/main/models.json)
+
 # Download models:
 ## v2
 https://object.pouta.csc.fi/hplt_bitextor_models/afr-eng_tiny.zip \
